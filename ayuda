@@ -1,1 +1,0 @@
-echo -e "#!/bin/bash\necho -e \"#!/bin/bash\\ngit add .\\nread -p \\\"Introduce el mensaje del commit: \\\" commit_message\\ngit commit -m \\\"\$commit_message\\\"\\ngit push\" > push && chmod 700 push" > push && chmod +x push                                                                 
