@@ -1,5 +1,10 @@
 #!/bin/bash
 git add .
-read -p "Introduce el mensaje del commit: " commit_message
-git commit -m "$commit_message"
-git push
+    read -p "Introduce el mensaje del commit: " commit_message
+    if [ -z "$commit_message" ]; then
+        commit_message="commit message"
+        echo "Mensaje de commit vacío. Usando mensaje predeterminado: '$commit_message'"
+    fi
+    git commit -m "$commit_message"
+    git push
+
